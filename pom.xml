@@ -18,5 +18,6 @@
     <modules>
         <module>patient-service</module>
         <module>auth-service</module>
+        <module>kafka-producer-service</module>
     </modules>
 </project>
