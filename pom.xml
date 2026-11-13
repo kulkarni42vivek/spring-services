@@ -20,5 +20,6 @@
         <module>auth-service</module>
         <module>kafka-producer-service</module>
         <module>kafka-consumer-service</module>
+        <module>product-service</module>
     </modules>
 </project>
