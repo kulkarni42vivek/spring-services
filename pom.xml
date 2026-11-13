@@ -21,5 +21,6 @@
         <module>kafka-producer-service</module>
         <module>kafka-consumer-service</module>
         <module>product-service</module>
+        <module>order-service</module>
     </modules>
 </project>
