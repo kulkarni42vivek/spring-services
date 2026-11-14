@@ -20,9 +20,9 @@ import com.kulkarni42vivek.order_service.repo.OrderRepo;
 public class OrderService {
 	
 	private final OrderRepo orderRepo;
-	private final WebClient webClient;
+	private final WebClient.Builder webClient;
 	
-	OrderService(OrderRepo orderRepo ,  WebClient webClient){
+	OrderService(OrderRepo orderRepo ,  WebClient.Builder webClient){
 		this.orderRepo = orderRepo;
 		this.webClient = webClient;
 	}
@@ -44,8 +44,8 @@ public class OrderService {
 		
 		List<String> orderCodes = list.stream().map(obj-> obj.getOrderCode()).toList();
 		
-		InventoryResponse[] inventoryResponseList = this.webClient.get()
-			.uri("http://localhost:60003/api/inventory/test",
+		InventoryResponse[] inventoryResponseList = this.webClient.build().get()
+			.uri("http://inventory-service/api/inventory/test",
 					uribuilder -> uribuilder.queryParam("orderCodes", orderCodes).build()
 				)
 			.retrieve()
