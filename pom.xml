@@ -29,6 +29,7 @@
         <module>order-service</module>
         <module>inventory-service</module>
 		<module>service-discovery-service</module>
+		<module>api-gateway-service</module>
     </modules>
     
     <dependencies>
