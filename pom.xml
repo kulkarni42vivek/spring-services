@@ -30,6 +30,7 @@
         <module>inventory-service</module>
 		<module>service-discovery-service</module>
 		<module>api-gateway-service</module>
+		<module>rabbitmq-service</module>
     </modules>
     
     <dependencies>
